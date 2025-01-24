@@ -10,7 +10,7 @@ def hw02_1(q1_pdf):
     documents = PyPDFLoader(q1_pdf).load()
     text_splitter = CharacterTextSplitter(chunk_overlap=0)
     page_chunks = text_splitter.split_documents(documents)
-    print(page_chunks[-1])
+    return page_chunks[-1]
 
 def hw02_2(q2_pdf):
     documents = PyPDFLoader(q2_pdf).load()
